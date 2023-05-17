@@ -362,5 +362,11 @@ while True:
                     audio = reconhecedor.record(mic, duration=10, offset=None)
                     cep = reconhecedor.recognize_google(audio, language='pt')
                     buscar_endereco(cep)
+            elif "SAIR" in comando or "ENCERRAR" in comando or "OBRIGADA" in comando:
+                sexta.say("Até logo! Encerrando o programa.")
+                print("Até logo! Encerrando o programa.")
+                sexta.runAndWait()
+                exit()
             else:
                 print("Comando não entendido.")
+                break
